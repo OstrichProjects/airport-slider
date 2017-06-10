@@ -50,7 +50,7 @@ const distances = ((airports, r) => {
     return airports
         .map((a) => [a[0], getDistance(r.latitude, r.longitude, a[1], a[2])])
         .sort((a, b) => a[1] - b[1])
-        .map((a, i) => [a[0], i/airports.length])
+        .map((a, i) => [a[0], i/(airports.length-1)])
         .reduce((acc, a) => Object.assign(acc, {[a[0]]: a[1]}), {});
 })(window.airports, randomAirport);
 
