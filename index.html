@@ -1,11 +1,9 @@
-<audio id="music" src="song.mp3" autoplay loop></audio>
-<div class="container">
-    <div class="prompt">
-        The volume depends on the distance between
-        <div><code id="random"></code> and&nbsp;<span id="airport" contenteditable="true"></span></div>
-    </div>
-    <div class="wrapper"><div id="indicator"></div></div>
-</div>
+<!doctype html>
+<html>
+<head>
+    <title>Airport Volume Slider</title>
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/e74a00456e442b3a2d0062c94095f002?s=64">
+</head>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @media (max-width: 599px) { html { font-size: 25px; } }
@@ -52,5 +50,16 @@ code, span {
     transition: 0.4s;
 }
 </style>
+<body>
+<audio id="music" src="song.mp3" autoplay loop></audio>
+<div class="container">
+    <div class="prompt">
+        The volume depends on the distance between
+        <div><code id="random"></code> and&nbsp;<span id="airport" contenteditable="true"></span></div>
+    </div>
+    <div class="wrapper"><div id="indicator"></div></div>
+</div>
 <script src="airports.js"></script>
 <script src="main.js"></script>
+</body>
+</html>
