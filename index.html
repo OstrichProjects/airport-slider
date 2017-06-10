@@ -1,0 +1,56 @@
+<audio id="music" src="song.mp3" autoplay loop></audio>
+<div class="container">
+    <div class="prompt">
+        The volume depends on the distance between
+        <div><code id="random"></code> and&nbsp;<span id="airport" contenteditable="true"></span></div>
+    </div>
+    <div class="wrapper"><div id="indicator"></div></div>
+</div>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@media (max-width: 599px) { html { font-size: 25px; } }
+@media (min-width: 600px) { html { font-size: 30px; } }
+@media (min-width: 900px) { html { font-size: 40px; } }
+@media (min-width: 1200px) { html { font-size: 50px; } }
+@media (min-width: 1800px) { html { font-size: 60px; } }
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Roboto', sans-serif;
+    color: antiquewhite;
+    height: 100vh;
+}
+code, span {
+    font-family: 'Roboto Mono', monospace;
+    color: lightcoral;
+    background-color: rgba(150, 150, 150, 0.4);
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 990px;
+    text-align: center;
+}
+.wrapper {
+    width: 100%;
+    height: 10px;
+    opacity: 0.3;
+    background-color: gray;
+    margin-top: 10px;
+}
+#indicator {
+    height: 100%;
+    background-color: black;
+    transition: 0.4s;
+}
+</style>
+<script src="airports.js"></script>
+<script src="main.js"></script>
